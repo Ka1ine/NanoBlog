@@ -1,0 +1,87 @@
+<html xmlns:th="https://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Alterar Mensagem</title>
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <style>
+            body{
+                background-color: rgba(201, 197, 238, 0.747);
+            }
+            h1{
+                color: rgb(48, 179, 150);
+            }
+            .formulario{
+                text-align: center;
+                padding-top: 60px;
+                font-family: 'Fredoka One', cursive;
+            }
+            
+            .happy{
+                color: rgb(241, 155, 43);
+            }
+            
+            label{
+                color: rgb(50, 50, 53);
+            }
+            
+            input{
+                border: none;
+                text-align: center;
+                font-family: 'Fredoka One', cursive; 
+                background-color: #be94d1d7;
+                color: rgb(49, 45, 45);
+                border: 2px solid #be94d1d7;
+                border-radius: 8px;
+                transition-duration: 0.4s;
+                font-family: 'Fira Sans Condensed', sans-serif;
+                font-size: 17px;
+            }
+            
+            input:hover{
+                background-color: white;
+                color:rgba(2, 1, 2, 0.671);
+                border: 2px solid #be94d1d7;
+            }
+            
+            .lista{
+                border: none;
+                text-align: center;
+                font-family: 'Fredoka One', cursive; 
+                background-color:rgba(241, 155, 43, 0.788);
+                color: rgb(49, 45, 45);
+                border: 2px solid rgb(241, 155, 0.788);
+                border-radius: 8px;
+                transition-duration: 0.4s;
+                font-family: 'Fira Sans Condensed', sans-serif;
+                font-size: 17px;
+                border-top: 100px;
+                margin-top: 20px;
+            }
+            
+            .lista:hover{
+                background-color: white;
+                color:rgba(2, 1, 2, 0.671);
+                border: 2px solid rgb(241, 155, 0.788);
+            }
+            </style>
+        <div class="formulario">
+        <h1>Alterar Mensagem</h1>
+        <form action = "/Mensagem/Update" method="post">
+            <label for="texto">Texto:</label>
+                <input type="text" id="texto" name="texto"><br><br>
+            <label for="id">Id:</label>
+                <input type="text" id="id" name="id"><br><br>
+
+
+
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar"/><br>
+        
+            <a href="/Mensagem/MensagemLista"><button class="lista">Lista de mensagens</button></a>
+        </div>
+        </form>
+        
+    </body>
+</html>
